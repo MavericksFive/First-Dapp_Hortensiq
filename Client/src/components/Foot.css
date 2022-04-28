@@ -1,0 +1,35 @@
+.FootContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: center;
+    margin-top: 50px;
+    border-top: 2px solid black;
+    width:100%
+}
+
+.FollowUs{
+    margin: 20px;
+    font-size: 15px;
+    display:flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    width:50%
+}
+
+.RightPart {
+    margin: 20px;
+    font-size: 15px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    place-content: center;
+    width:50%
+}
+.END{
+    margin: 20px;
+    text-align: center;
+    font-size: 15px;
+}

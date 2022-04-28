@@ -1,0 +1,156 @@
+.Big-container {
+    display:flex;
+    flex-direction: column;
+}
+.Roadmap-container{
+    margin-top:75px;
+    background-color: white(0, 0, 0);
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    justify-content: center;
+    padding: 30px;
+    width: 100%;
+    z-index:0;
+}
+
+#root{
+    width:100%
+}
+.Roadmap-container::after {
+    background-color: rgb(184, 4, 4);
+    content:'';
+    position: absolute;
+    left: calc(50% - 2px);
+    width: 4px;
+    height: 100%;
+    
+}
+
+.Roadmap-title{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-style: oblique;
+    font-size:50px;
+    font-variant: small-caps;
+    font-family:’FreeMono’, monospace;
+    text-align: left;
+    margin:20px;
+    margin-top:70px;
+}
+
+.Container-Item{
+    display:flex;
+    flex-direction: row;
+    position:relative;
+    justify-content: flex-end;
+    padding-right: 80px;
+    margin: 10px 0;
+    width: 50%;
+    z-index:50;
+}
+
+.Container-Item:nth-child(even) {
+    align-self:flex-end;
+    justify-content: flex-start;
+    padding-right:0px;
+    padding-left: 80px;
+}
+.Container-Item .Content {
+    max-width:70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.Content .Title{
+    font-style: oblique;
+    color:black;
+    font-size:20px;
+    font-variant: small-caps;
+    font-family:’FreeMono’, monospace;
+}
+.Content .Text {
+    color:black;
+    margin-top: 10px;
+    width:100%;
+    font-size:20px;
+    font-weight:100;
+    font-variant: small-caps;
+    font-family:’FreeMono’, monospace;
+}
+.Circle {
+    background-color: white;
+    border: 2px solid rgb(184, 4, 4);
+    width:20px;
+    height: 20px;
+    border-radius:50%;
+    top: calc(50% - 10px);
+    position:absolute;
+    right: -10px;
+    z-index:90;
+    
+}
+
+.Container-Item:nth-child(even) .Circle {
+    right: auto;
+    left: -10px;
+}
+
+@media only screen and (max-width: 600px){
+    .Container-Item{
+        display:flex;
+        flex-direction: row;
+        position:relative;
+        padding-right: 30px;
+        margin: 10px 0;
+        width: 100%;
+        padding: 10px;
+        justify-content:center
+    }
+    .Container-Item:nth-child(even) {
+        align-self:flex-start;
+        justify-content: center;
+        width: 100%;
+        padding: 10px;
+
+
+
+    }
+
+    .Container-Item .Content {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .Content .Text {
+        width:100%;
+        font-size:15px;
+    }
+    .Circle {
+        background-color: white;
+        border: 2px solid rgb(184, 4, 4);
+        width:20px;
+        height: 20px;
+        border-radius:50%;
+        top: calc(50% - 10px);
+        position:absolute;
+        left: -10px;
+       
+    }
+
+    .Container-Item:nth-child(even) .Circle {
+        right: auto;
+        left: -10px;
+    }
+    .Roadmap-container::after {
+        background-color: rgb(184, 4, 4);
+        content:'';
+        position: absolute;
+        left: 28px;
+        width: 4px;
+        height: 100%;
+    }
+}
