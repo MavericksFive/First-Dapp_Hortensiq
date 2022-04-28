@@ -7,6 +7,7 @@ import AOS from 'aos';
 import HortensiaNFT from '/Users/arnaudberger/hortensiq/Client/src/Abis/HortensiaNFT.json';
 import {ethers} from 'ethers';
 
+const graou;
 
 
 AOS.init();
@@ -25,3 +26,4 @@ function App() {
 
 export default App
 export let min
+
