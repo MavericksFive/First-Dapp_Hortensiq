@@ -9,7 +9,7 @@ function  Gallerie () {
     var [defaultAccount, setdefaultAccount] = useState(null);
     var [userBalance, setuserBalance] = useState(null);
   
-    var Web3 = require('web3')
+    var Web3 = require('web3/dist/web3.min.js')
     var web3 = new Web3("http://localhost:7545");
   
     var account;

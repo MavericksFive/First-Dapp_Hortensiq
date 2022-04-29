@@ -5,7 +5,6 @@ import Logo from '../components/logo.svg'
 import './navbar.css';
 import {AiFillInstagram} from 'react-icons/ai'
 import { Fade as Hamburger } from 'hamburger-react'
-import Gallerie from "./Pages/Home.js"
 
 const scrollWithOffset = (el,px) => {
     const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
@@ -16,22 +15,22 @@ const NavbarLinks = () => {
    return(
 <>
     <div>
-    <NavHashLink to="/#Gallerie" className= "nav-link" scroll={el => scrollWithOffset(el, -80)} >
+    <HashLink className= "nav-link" to="/#Gallerie"  scroll={el => scrollWithOffset(el, -80)} >
     <h3>GALLERIE</h3>
-     </NavHashLink>
+     </HashLink>
      </div>
      <div>
-     <HashLink to="/#Roadmap" className= "nav-link" scroll={el => scrollWithOffset(el,-20)}>
+     <HashLink  className= "nav-link" to="/#Roadmap" scroll={el => scrollWithOffset(el,-20)}>
      <h3>ROADMAP</h3>
      </HashLink>
      </div>
      <div>
-     <HashLink  to="/#Team" className= "nav-link" scroll={el => scrollWithOffset(el,-30)}>
+     <HashLink className= "nav-link" to="/#Team"  scroll={el => scrollWithOffset(el,-30)}>
      <h3>TEAM</h3>
      </HashLink>
      </div>
      <div>
-      <HashLink  to="/#Faq" className= "nav-link" scroll={el => scrollWithOffset(el, -200)}>
+      <HashLink  className= "nav-link" to="/#Faq" scroll={el => scrollWithOffset(el, -200)}>
       <h3>FAQ</h3>
          </HashLink>
      </div>

@@ -8,7 +8,7 @@ function Top() {
     <div className = "top-body" id="Top" >
      <img src="Top-img.png" >
      </img>
-     <h3 className>Hortensia</h3>
+     <h3>Hortensia</h3>
     </div>
     </>
 )
