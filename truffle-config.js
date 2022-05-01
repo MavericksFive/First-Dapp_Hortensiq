@@ -7,15 +7,12 @@ module.exports = {
       gas: 5000000
     }
   },
+  contracts_directory: "/Users/arnaudberger/hortensiq/Client/src/contracts",
+  contracts_build_directory: "/Users/arnaudberger/hortensiq/Client/src/Abis",
+  
   compilers: {
     solc: {
-      version: "0.8.11",
-      settings: {
-        optimizer: {
-          enabled: true, // Default: false
-          runs: 200      // Default: 200
-        },
-      }
+      version: "^0.8.0",
     }
   }
 };

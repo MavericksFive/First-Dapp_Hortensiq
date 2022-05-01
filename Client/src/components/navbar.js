@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
-import {NavHashLink,HashLink} from 'react-router-hash-link'
+import {HashLink} from 'react-router-hash-link'
 import Logo from '../components/logo.svg'
 import './navbar.css';
 import {AiFillInstagram} from 'react-icons/ai'
