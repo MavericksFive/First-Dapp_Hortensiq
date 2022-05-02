@@ -13,7 +13,7 @@ function  Gallerie () {
     var web3 = new Web3("http://localhost:7545");
   
     const ABI = HortensiaNFT.abi;
-    const address = '0x2f6E03df72aAB80c04d29ecdDCF653D4a77d50c0';
+    const address = '0xB6dc58fb9576ab253e2fb8E687e0df9e006e5159';
     const HortensiaNFTContract = new web3.eth.Contract(ABI, address);
 
   if (window.ethereum) {
@@ -25,12 +25,6 @@ function  Gallerie () {
   } else {
     setErrorMessage('Install MetaMask');
   }
-  
-  const accountChangedHandler = (newAccount) => {
-    setdefaultAccount(newAccount);
-    getUserBalance(newAccount);
-  }
-  
   const getUserBalance = async (address) => {
     const balance = [];
     const result = await HortensiaNFTContract.methods.balanceOf(address).call()
@@ -42,6 +36,11 @@ function  Gallerie () {
     }
     setuserBalance(balance)
   }
+  const accountChangedHandler = (newAccount) => {
+    setdefaultAccount(newAccount);
+    getUserBalance(newAccount);
+  }
+  
   
   window.ethereum.on('accountsChanged', accountChangedHandler)
   
@@ -50,8 +49,9 @@ function  Gallerie () {
     console.log(tokenId)
     const contentId = 'QmYrjfAN1wCSr9U2X5g2GhSBUg4i1em1rLBEdLCx5vLnJv';
     const metadataURI = `${contentId}/${tokenId}.json`;
-    await HortensiaNFTContract.methods.paytoMint(defaultAccount, metadataURI).send({ from: defaultAccount, value: web3.utils.toWei("0.05", "ether"), gas:2000000 })
-    .then(result => getUserBalance(defaultAccount))
+    let result = await HortensiaNFTContract.methods.paytoMint(defaultAccount, metadataURI).send({ from: defaultAccount, value: web3.utils.toWei("0.05", "ether"), gas:2000000 })
+    setTimeout(500)
+    getUserBalance(defaultAccount)
     }
 
   
@@ -74,8 +74,6 @@ function  Gallerie () {
         <div className ="DisplayAccount">{defaultAccount}</div>
         <div className="NFTsContainer">
         {userBalance.map((image,i) => <img src={image} key={i}></img>)}</div>
-      
-        
         </div>
     )
 }
