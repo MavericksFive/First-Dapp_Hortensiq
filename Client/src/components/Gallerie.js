@@ -1,7 +1,7 @@
 import {React, useState, useEffect} from 'react'
 import { AiTwotoneUpSquare } from 'react-icons/ai';
 import "./Gallerie.css"
-import HortensiaNFT from '/Users/arnaudberger/hortensiq/Client/src/Abis/HortensiaNFT.json';
+import HortensiaNFT from '../Abis/HortensiaNFT.json';
 import { ethers } from "ethers";
 
 

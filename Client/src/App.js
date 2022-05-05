@@ -1,11 +1,10 @@
 import Navbar from './components/navbar';
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Routes, Route, BrowserRouter } from 'react-router-dom';
 import './App.css';
 import Home from './components/Pages/Home';
-import {React, useState, useEffect} from 'react';
+import {React} from 'react';
 import AOS from 'aos';
-import HortensiaNFT from '/Users/arnaudberger/hortensiq/Client/src/Abis/HortensiaNFT.json';
-import {ethers} from 'ethers';
+
 
 
 AOS.init();
