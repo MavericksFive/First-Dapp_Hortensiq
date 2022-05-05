@@ -1,5 +1,4 @@
-import {React, useState, useEffect} from 'react'
-import { AiTwotoneUpSquare } from 'react-icons/ai';
+import {React, useState} from 'react'
 import "./Gallerie.css"
 import HortensiaNFT from '../Abis/HortensiaNFT.json';
 import { ethers } from "ethers";
@@ -51,7 +50,7 @@ function  Gallerie () {
     const contentId = 'QmYrjfAN1wCSr9U2X5g2GhSBUg4i1em1rLBEdLCx5vLnJv';
     const metadataURI = `${contentId}/${tokenId}.json`;
     HortensiaNFTContract.connect(signer)
-    await HortensiaNFTContract.paytoMint(defaultAccount, metadataURI, {gasLimit:ethers.utils.hexlify(100000), value: ethers.utils.parseEther("0.05")})
+    await HortensiaNFTContract.paytoMint(defaultAccount, metadataURI, {gasLimit:100000, value: ethers.utils.parseEther("0.05")})
     getUserBalance(defaultAccount)
     }
 
