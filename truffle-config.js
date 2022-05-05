@@ -1,5 +1,5 @@
 var HDWalletProvider = require("/Users/arnaudberger/hortensiq/Client/node_modules/truffle-hdwallet-provider");
-const mnemonic = "a09d4f033c237e2b5afdbee167fa3942e52dc6a61deb9cf29e77cf7f8b5cb667";
+const mnemonic = "2a1be606a4026ebf092d21cbc9f81dc5de468e7d0231b8349338d6eb9663b5b2";
 
 module.exports = {
   networks: {
@@ -9,6 +9,15 @@ module.exports = {
       network_id: "*", // Match any network id
       gas: 5000000
     },
+
+    rinkeby: {
+      provider: function() { 
+       return new HDWalletProvider(mnemonic,"https://rinkeby.infura.io/v3/c5f7890fee9141739841b310a607f31e");
+      },
+      network_id: 4,
+      gas: 4500000,
+      gasPrice: 10000000000,
+  }
   },
   contracts_directory: "/Users/arnaudberger/hortensiq/Client/src/contracts",
   contracts_build_directory: "/Users/arnaudberger/hortensiq/Client/src/Abis",
