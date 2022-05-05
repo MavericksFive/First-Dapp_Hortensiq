@@ -15,8 +15,7 @@ module.exports = {
        return new HDWalletProvider(mnemonic,"https://rinkeby.infura.io/v3/c5f7890fee9141739841b310a607f31e");
       },
       network_id: 4,
-      gas: 4500000,
-      gasPrice: 10000000000,
+      gas: 5500000,
   }
   },
   contracts_directory: "/Users/arnaudberger/hortensiq/Client/src/contracts",

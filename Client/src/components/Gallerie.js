@@ -51,7 +51,7 @@ function  Gallerie () {
     const contentId = 'QmYrjfAN1wCSr9U2X5g2GhSBUg4i1em1rLBEdLCx5vLnJv';
     const metadataURI = `${contentId}/${tokenId}.json`;
     HortensiaNFTContract.connect(signer)
-    await HortensiaNFTContract.paytoMint(defaultAccount, metadataURI, {gasLimit:23000,gasPrice:ethers.utils.parseEther("0.000002"), value: ethers.utils.parseEther("0.05")})
+    await HortensiaNFTContract.paytoMint(defaultAccount, metadataURI, {gasLimit:ethers.utils.hexlify(100000), value: ethers.utils.parseEther("0.05")})
     getUserBalance(defaultAccount)
     }
 
