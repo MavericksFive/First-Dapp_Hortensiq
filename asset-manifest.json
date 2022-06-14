@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/First-Dapp_Hortensiq/static/css/main.cb2acc7a.css",
+    "main.js": "/First-Dapp_Hortensiq/static/js/main.2262f337.js",
+    "static/media/logo.svg": "/First-Dapp_Hortensiq/static/media/logo.d290192a2addb531c60fa2f589962541.svg",
+    "index.html": "/First-Dapp_Hortensiq/index.html",
+    "main.cb2acc7a.css.map": "/First-Dapp_Hortensiq/static/css/main.cb2acc7a.css.map",
+    "main.2262f337.js.map": "/First-Dapp_Hortensiq/static/js/main.2262f337.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cb2acc7a.css",
+    "static/js/main.2262f337.js"
+  ]
+}
